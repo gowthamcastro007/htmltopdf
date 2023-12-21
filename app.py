@@ -10,6 +10,12 @@ hostname = socket.gethostname()
 ## getting the IP address using socket.gethostbyname() method
 ip_address = socket.gethostbyname(hostname)
 
+
+import os
+os.system("wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb")
+os.system("sudo dpkg -i google-chrome-stable_current_amd64.deb")
+os.system("sudo apt-get install -f")
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
