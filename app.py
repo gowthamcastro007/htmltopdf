@@ -4,6 +4,12 @@ from flask import send_file
 
 from pyhtml2pdf import converter
 
+import socket
+## getting the hostname by socket.gethostname() method
+hostname = socket.gethostname()
+## getting the IP address using socket.gethostbyname() method
+ip_address = socket.gethostbyname(hostname)
+
 app = Flask(__name__)
 
 
