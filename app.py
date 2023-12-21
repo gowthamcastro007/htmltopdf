@@ -10,19 +10,24 @@ hostname = socket.gethostname()
 ## getting the IP address using socket.gethostbyname() method
 ip_address = socket.gethostbyname(hostname)
 
-app = Flask(__name__)
 
 
-@app.route("/")
-def index():
-    return 'hello world'
+def create_app():
+    app = Flask(__name__)
+    @app.route("/")
+    def index():
+         return 'hello world'
+    @app.route("/url")
+    def change_ip() :
+         name = request.args.get('name')
+         converter.convert(name, 'sample.pdf',timeout=4, print_options={"scale": 1,"paperHeight":12})
+         return send_file("sample.pdf", as_attachment=True)
+    return app
+    
+app = create_app()
     
 
-@app.route("/url")
-def change_ip() :
-    name = request.args.get('name')
-    converter.convert(name, 'sample.pdf',timeout=4, print_options={"scale": 1,"paperHeight":12})
-    return send_file("sample.pdf", as_attachment=True)
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080)
