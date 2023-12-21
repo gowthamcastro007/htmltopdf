@@ -15,10 +15,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-driver_path = './chromedriver'
-url = [URL]
-loginid=input("id: ")
-loginpass=input("password: ")
+
 options = Options()
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
