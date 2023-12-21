@@ -24,5 +24,5 @@ def change_ip() :
     converter.convert(name, 'sample.pdf',timeout=4, print_options={"scale": 1,"paperHeight":12})
     return send_file("sample.pdf", as_attachment=True)
 
-if __name__ == "__main__":
-    app.run(debug=True,host=ip_address)
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=8080)
