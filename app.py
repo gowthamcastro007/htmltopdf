@@ -13,6 +13,11 @@ ip_address = socket.gethostbyname(hostname)
 app = Flask(__name__)
 
 
+@app.route("/", methods=["GET"])
+def index():
+    return 'hello world'
+    
+
 @app.route("/url")
 def change_ip() :
     name = request.args.get('name')
