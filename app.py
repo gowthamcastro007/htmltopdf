@@ -11,11 +11,7 @@ hostname = socket.gethostname()
 ip_address = socket.gethostbyname(hostname)
 
 
-import os
-os.system("wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb")
-os.system("dpkg -x google-chrome-stable_current_amd64.deb $PWD")
-os.system("echo $PWD")
-os.system("export PATH='$PATH:$PWD'")
+
 
 
 from selenium import webdriver
@@ -25,7 +21,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 options = Options()
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager(version="114.0.5735.90").install()),options=options)
 
 
 
