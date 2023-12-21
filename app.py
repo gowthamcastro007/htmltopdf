@@ -14,7 +14,7 @@ ip_address = socket.gethostbyname(hostname)
 import os
 os.system("wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb")
 os.system("dpkg -x google-chrome-stable_current_amd64.deb .")
-os.system("echo '$PATH'")
+os.system("echo '${PATH//:/$'\n'}'")
 
 
 from selenium import webdriver
