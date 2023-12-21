@@ -20,4 +20,4 @@ def change_ip() :
     return send_file("sample.pdf", as_attachment=True)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True,host=ip_address)
