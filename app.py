@@ -14,4 +14,4 @@ def change_ip() :
     return send_file("sample.pdf", as_attachment=True)
 
 if __name__ == "__main__":
-    app.run(debug=True,host='192.168.0.112')
+    app.run()
