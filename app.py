@@ -13,8 +13,8 @@ ip_address = socket.gethostbyname(hostname)
 
 import os
 os.system("wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb")
-os.system("sudo dpkg -i google-chrome-stable_current_amd64.deb")
-os.system("sudo apt-get install -f")
+os.system("dpkg -i google-chrome-stable_current_amd64.deb")
+os.system("apt-get install -f")
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
